@@ -20,6 +20,8 @@ module YuukiBot
   # owners.yml always overrides config.yml, but if it doesn't exist, config.yml will be honoured.
   # This ensures compatibility with old config files, meaning no owners file needs to be setup.
   if File.exists?('config/owners.yml')
+    @config['owners'] = YAML.load_file('config/owners.yml')['owners']
+  else
     @config['owners'] = YAML.load_file('config/config.yml')['owners']
   end
 
@@ -54,7 +56,7 @@ module YuukiBot
           when 'invisible' || 'offline' then event.bot.invisible
           when 'stream' || 'streaming' then event.bot.stream(@config['game'], @config['twitch_url'])
           else
-            raise 'No valid status found.'
+            # Raising events sucks, lets just ignore it :eyes:
         end
         event.bot.game = "on #{`hostname`}" rescue nil
         puts "[READY] Logged in as #{event.bot.profile.distinct} !"
