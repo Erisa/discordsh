@@ -1,0 +1,52 @@
+##~~~ DO NOT OPEN THIS FILE IN NOTEPAD (Use a modern text editor such as Notepad++ or any Unix-based one)  ~~~##
+##~~~ If everything displays on one line, do not save the file and instead open in a different editor.      ~~~##
+#######################################################################################################
+## To get started, please create a bot account at https://discordapp.com/developers/applications/me  ##
+## Then create a bot user, find the token and client id, and put them below.                         ##
+## It is also highly recommended that you add your user ID to owners.sample.yml                      ##
+## Anything after a hash (#) is a comment and will be ignored.                                       ##
+#######################################################################################################
+## When you're done, save this file as `config.yml` (In the config folder)                           ##
+#######################################################################################################
+
+token: Mjk1OTUwMjg3MDcwNTYwMjU2.C7rIsw.az_gJtwJtz-Hv8e_jmq5tQK0WQw # Get from https://discordapp.com/developers/applications/me
+client_id: 295950287070560256 # Also get from https://discordapp.com/developers/applications/me
+prefixes:
+  - ""!"
+
+# Set to false for less console output.
+verbose: true
+
+## Set to a custom emoji using <:name:ID>
+emoji_tickbox: ✅
+emoji_error: ❌
+emoji_warning: ⚠
+emoji_clear: 🚮
+emoji_success: 👌
+
+# Uncomment to use Discord Bots style tickbox and errors.
+# Only works if bot is in Discord Bots (Which an obvious clone shouldnt be!)
+# Alternatively upload the emote images to your own server and change the IDs.
+
+#~ emoji_tickbox: <:check:314349398811475968>
+#~ emoji_error: <:xmark:314349398824058880>
+
+# Change to false if you don't like the bot "typing" all the time.
+typing_default: true
+
+##~~~ (: DONT TOUCH THIS PART :) ~~~##
+
+# Init options, if unsure please leave alone to avoid accidental catastrophes.
+parse_self: true
+parse_bots: false
+selfbot: false # Doesn't work on bot accounts.
+prefix_type: always
+type: :bot
+catch_errors: false
+
+# Debug options, only change if contributing to Yuuki-Bot or making your own fork.
+
+# Loads in all the modules and then exits before running the bot.
+pretend_run: false
+# More terminal output than verbose.
+debug: false

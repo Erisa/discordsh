@@ -1,0 +1,5 @@
+source 'http://rubygems.org'
+gem 'discordrb', git: 'https://github.com/meew0/discordrb.git'
+gem 'rainbow'
+gem 'rake'
+gem 'commandrb', git: 'https://github.com/Seriell/commandrb.git'
